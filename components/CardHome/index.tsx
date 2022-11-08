@@ -10,8 +10,8 @@ export default function CardHome() {
 
       <div className="container text-center mt-5 ">
         <div className="row justify-content-center">
-          <Card title="Courses" />
-          <Card title="Jobseeker" />
+          <Card title="Courses" link="/courses" />
+          <Card title="Jobseeker" link="/jobseeker" />
         </div>
       </div>
     </>

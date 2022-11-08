@@ -1,13 +1,14 @@
 import MenuNavbar from "./MenuNavbar";
 import ToggleNavbar from "./ToggleNavbar";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-light">
       <div className="container">
-        <a className="navbar-brand fw-bold fs-3" href="#">
-          Directed.
-        </a>
+        <Link href="/" className="navbar-brand fw-bold fs-3">
+          Directed
+        </Link>
         <ToggleNavbar />
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">

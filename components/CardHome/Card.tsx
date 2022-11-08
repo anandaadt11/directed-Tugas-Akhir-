@@ -1,9 +1,13 @@
+import Link from "next/link";
+
 interface CardProps {
   title: "Courses" | "Jobseeker";
   buttonTitle?: boolean;
+  link: String;
 }
+
 export default function Card(props: Partial<CardProps>) {
-  const { title, buttonTitle = "Get Started" } = props;
+  const { title, buttonTitle = "Get Started", link } = props;
   return (
     <div className="col-md-4 mb-3 ">
       <div className="card me-5 shadow-lg">
@@ -18,9 +22,11 @@ export default function Card(props: Partial<CardProps>) {
             Some quick example text to build on the card title and make up the
             bulk of the content.
           </p>
-          <button type="button" className="btn btn-outline-primary">
-            {buttonTitle}
-          </button>
+          <Link href={`${link}`}>
+            <button type="button" className="btn btn-outline-primary">
+              {buttonTitle}
+            </button>
+          </Link>
         </div>
       </div>
     </div>
